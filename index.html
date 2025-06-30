@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>صفحه ورود</title>
+<style>
+  body {
+    background-color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .login-card {
+    background-color: #e6f0ff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #captcha-text {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 12px;
+    user-select: none;
+    background: #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: monospace;
+  }
+  #message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="login-card">
+    <input type="text" id="username" placeholder="نام کاربری" />
+    <input type="password" id="password" placeholder="رمز عبور" />
+    <div id="captcha-text"></div>
+    <input type="text" id="captcha" placeholder="کد کپچا را وارد کنید" />
+    <button onclick="validateForm()">ورود</button>
+    <div id="message"></div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
